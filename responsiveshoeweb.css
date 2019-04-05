@@ -1,0 +1,124 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #070c24;
+}
+.container{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 900px;
+    height: 600px;
+    background: #fff;
+    margin: 20px;
+}
+.container .image{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background: #006dbc;
+}
+.container .image::before{
+    content: 'nike';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #000;
+    opacity: 0.1;
+    font-size: 8rem;
+    font-weight: 800;
+}
+.container .image img{
+    position: relative;
+    width: 700px;
+    transform: rotate(-30deg);
+    left: -100px;
+}
+.container .details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+}
+.container .details h1{
+    margin: 0;
+    padding: 0;
+    font-size: 2.8rem;
+    line-height: 0.8rem;
+    color: #444;
+}
+.container .details h1 span{
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;
+}
+.container .details p{
+    max-width: 85%;
+    margin-left: 15px;
+    color: #333;
+    font-size: 15px;
+}
+.container .details h3{
+    margin: 0;
+    padding: 0;
+    font-size: 2.5rem;
+    color: #a2a2a2;
+    float: left;
+}
+.container .details button{
+    background: #006dbc;
+    color: #fff;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    margin-top: 5px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 40px;
+    float: right;
+}
+@media (max-width:1080px){
+    .container{
+        height: auto;
+    }
+    .container .image{
+        padding: 30px;
+        box-sizing: border-box;
+        width: 100% !important;
+        height: 500px;
+        overflow: hiddenl;
+        text-align: center;
+    }
+    .container .image img{
+        left: initial;
+        max-width: 100%;
+        transform: rotate(0deg);
+        transition: transform 600ms;
+    }
+    .container .details{
+        width: 100% !important;
+        height: auto;
+        padding: 20px;
+        margin-top: 1rem;
+    }
+    .container .details p{
+        max-width: 100%;
+        margin-left: 0;
+    }
+}
